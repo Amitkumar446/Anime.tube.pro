@@ -1,0 +1,36 @@
+:root{
+  --bg:#090909;
+  --card:#161616;
+  --muted:#888;
+  --accent:rgb(255,30,30);
+  --glass:rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box;font-family:Inter,system-ui}
+body{margin:0;background:#050505 url('bg.jpg') center/cover fixed;color:#eee}
+header{display:flex;align-items:center;gap:18px;padding:12px 20px;background:rgba(0,0,0,0.55);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,50,50,0.3)}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;color:var(--accent);text-shadow:0 0 8px var(--accent)}
+.logo img{width:40px;height:40px;border-radius:10px}
+#headerAvatar{width:40px;height:40px;border-radius:50%;border:2px solid var(--accent);cursor:pointer;box-shadow:0 0 10px var(--accent)}
+.search{flex:1;display:flex;align-items:center;background:var(--card);padding:8px;border-radius:9px}
+.search input{flex:1;background:transparent;border:0;color:#fff;font-size:15px;outline:none}
+.btn{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:white;cursor:pointer;font-weight:600;box-shadow:0 0 10px var(--accent)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,80,80,0.3)}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:18px;padding:18px}
+nav.side{background:rgba(0,0,0,0.6);padding:14px;border-radius:12px;height:calc(100vh - 120px);overflow:auto}
+nav.side a{display:block;padding:10px 12px;margin-bottom:8px;border-radius:8px;color:#fff;text-decoration:none;cursor:pointer}
+nav.side a:hover{background:rgba(255,20,20,0.1);box-shadow:0 0 8px var(--accent)}
+.player-card{background:rgba(0,0,0,0.55);padding:14px;border-radius:12px;border:1px solid rgba(255,50,50,0.2)}
+video{width:100%;max-height:520px;border-radius:10px;background:#000;border:1px solid rgba(255,0,0,0.3);box-shadow:0 0 25px rgba(255,0,0,0.4)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:12px}
+.card{background:rgba(0,0,0,0.5);padding:10px;border-radius:10px;cursor:pointer;position:relative;border:1px solid rgba(255,20,20,0.2)}
+.card:hover{box-shadow:0 0 15px var(--accent)}
+.del-btn{position:absolute;top:5px;right:5px;background:var(--accent);border:none;padding:5px 8px;border-radius:6px;color:#fff;font-size:11px;cursor:pointer}
+.footer{text-align:center;color:var(--muted);padding:20px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);justify-content:center;align-items:center;z-index:200}
+.modal-box{background:#111;border-radius:14px;padding:22px;width:360px;border:1px solid rgba(255,0,0,0.4);box-shadow:0 0 20px var(--accent)}
+.modal-box h2{text-align:center;color:var(--accent)}
+.modal input{width:100%;margin:6px 0;padding:10px;border-radius:8px;border:1px solid rgba(255,50,50,0.3);background:#000;color:#fff}
+.avatar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.avatar-grid img{width:70px;height:70px;border-radius:50%;cursor:pointer;border:2px solid transparent}
+.avatar-grid img:hover{border-color:var(--accent);box-shadow:0 0 10px var(--accent)}
+.avatar-selected{border-color:var(--accent) !important;box-shadow:0 0 10px var(--accent) !important}

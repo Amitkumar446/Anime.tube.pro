@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AnimeTube Pro — Red Neon Edition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo"><img src="main.png" alt="logo">AnimeTube Pro</div>
+  <div class="search">
+    <input id="searchBox" placeholder="Search anime…">
+    <button class="btn ghost" id="searchBtn">Search</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div id="profileSection"></div>
+    <button class="btn" id="loginBtn"><img src="main.png" width="18"> Login/Register</button>
+    <label class="btn" for="fileUpload" id="uploadBtn" style="display:none"><img src="admin.jpg" width="18"> Upload</label>
+    <input id="fileUpload" type="file" accept="video/*" multiple style="display:none">
+    <button class="btn ghost" id="toggleMusic">Music</button>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="side">
+    <a>All</a><a>Action</a><a>Romance</a><a>Adventure</a>
+  </nav>
+  <main>
+    <section class="player-card">
+      <video id="mainVideo" controls></video>
+      <div class="meta"><h2 id="videoTitle">Select a video…</h2></div>
+    </section>
+    <section class="grid" id="thumbGrid"></section>
+    <section class="playlist-card" id="playlistSection" style="margin-top:16px">
+      <h3 style="color:var(--accent)">Playlist</h3>
+      <div id="playlistGrid" class="grid"></div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h2>Login / Register</h2>
+    <input id="usernameInput" placeholder="Username">
+    <input id="passwordInput" type="password" placeholder="Password">
+    <p style="margin:6px 0;color:#bbb;text-align:center">Choose your avatar</p>
+    <div class="avatar-grid" id="avatarGrid"></div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button class="btn" id="loginSubmit"><img src="login.png" width="18"> Login</button>
+      <button class="btn ghost" id="registerSubmit"><img src="registration.png" width="18"> Register</button>
+    </div>
+  </div>
+</div>
+
+<button id="adminLoginBtn" style="position:fixed;bottom:20px;right:20px;background:var(--accent);border:none;padding:10px 14px;border-radius:8px;color:#fff;z-index:50">Admin Login</button>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.10.1/tsparticles.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
